@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<package>
+    <metadata>
+        <id>PSRandomText</id>
+        <version>$VERSIONHERE$</version>
+        <authors>Nate Bruneau</authors>
+        <description>Gets Random Text for generating quick content</description>
+    </metadata>
+</package>
