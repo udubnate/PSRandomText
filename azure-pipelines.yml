@@ -4,6 +4,12 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
+variables:
+  major: 0
+  minor: 0
+  patch: $(Build.BuildID)
+  buildVer: $(major).$(minor).$(Build.BuildID)
+
 trigger:
 - dev
 
