@@ -6,4 +6,7 @@
         <authors>Nate Bruneau</authors>
         <description>Gets Random Text for generating quick content</description>
     </metadata>
+    <files>
+    <file src="*" exclude="*.nuspec" />
+    </files>
 </package>
