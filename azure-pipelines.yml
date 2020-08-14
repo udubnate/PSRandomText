@@ -24,14 +24,14 @@ stages:
     - task: PowerShell@2
       inputs:
         filePath: '$(System.DefaultWorkingDirectory)/Build/build.ps1'
-    - task: NuGetCommand@2
+    - task: DotNetCoreCLI@2
+      displayName: 'dotnet pack $(buildConfiguration)'
       inputs:
-        command: 'pack'
-        packagesToPack: 'PSRandomText.nuspec'
-        versioningScheme: byEnvVar
-        versionEnvVar: buildVer
-        buildProperties: 'VERSIONHERE=$(buildVer)'
-
+        command: pack
+        versioningScheme: byPrereleaseNumber
+        majorVersion: '$(Major)'
+        minorVersion: '$(Minor)'
+        patchVersion: '$(Patch)'
 
 
 
