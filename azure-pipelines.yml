@@ -28,7 +28,9 @@ stages:
       inputs:
         command: 'pack'
         packagesToPack: 'PSRandomText.nuspec'
-        versioningScheme: 'byBuildNumber'
+        versioningScheme: byEnvVar
+        versionEnvVar: buildVer
+        buildProperties: 'VERSIONHERE=$(buildVer)'
 
 
 
